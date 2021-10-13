@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+}
+
+#root {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+[data-section] {
+  width: 100%;
+  padding-bottom: 100vh;
+  background-image: url("dust.png");
+}
+
+.stop {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.els {
+  display: flex;
+}
+
+.el1 {
+  width: 15vmax;
+  height: 15vmax;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-120%,0px );
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.el2 {
+  width: 15vmax;
+  height: 15vmax;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-120%,0px );
+  opacity: 0;
+  z-index: 1;
+  left: -116px;
+  position: relative;
+  transition: 0.8s;
+}
+.el3 {
+  z-index: 1;
+  left: -235px;
+  position: relative;
+  width: 15vmax;
+  height: 15vmax;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-120%,0px );
+  opacity: 0;
+  transition: 0.8s;
+}
+._active {
+  transform: translate(0px,0px );
+  opacity: 1;
+  left: 0;
+  margin: 0 20px;
+}
+._afterActive
+{
+  transform: skewX(20deg);
+  background:  #203a43;
+}
+._afterActiveto
+{
+  transform: skewX(180deg);
+  background:  #203a43;
+}
+.el:not(:last-child) {
+  margin-right: 5vmax;
+}
